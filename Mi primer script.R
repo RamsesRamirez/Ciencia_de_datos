@@ -1,4 +1,4 @@
-Hola
+#Hola
 #aquí va el número
 #en la ventana de abajo va a salir el resultado de nuestro análisis
 
