@@ -1,0 +1,70 @@
+---
+title: "Práctica 1"
+author: "RamsésRamírez"
+date: "2025-12-12"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Esporación de la matriz
+
+Esta línea de comando reconoce la matriz iris que se encuentra precargada en R.
+
+```{r}
+data(iris)
+```
+
+Esta línea de comando despliega la dimensión de la matriz.
+
+```{r}
+dim (iris)
+```
+
+Esta línea de comando muestra el nombre de las variables.
+
+```{r}
+colnames(iris)
+```
+
+Esta línea de comando muestra las estadísticas descriptivas
+
+```{r}
+summary(iris)
+```
+
+# Generación de gráficos
+
+Pasos
+1.- Descargar paquetes
+
+```{r,message=FALSE}
+install.packages("ggplot2")
+```
+
+2.- Abrir librerias.
+
+```{r}
+library("ggplot2")
+```
+
+3.- Construcción del gráfico
+3.1- construcción del vector de color
+```{r}
+color=c("deepskyblue4","firebrick2","lightgreen")
+```
+
+```{r}
+BX<-ggplot(iris, aes(x=Species, y=Sepal.Length))+
+  geom_boxplot(fill=color)+
+  ggtitle("Mi primer Boxplot")+
+  xlab("Especie")+
+  ylab("Largo del Sépalo")+
+  theme_bw()
+```
+
+```{r}
+BX
+```
